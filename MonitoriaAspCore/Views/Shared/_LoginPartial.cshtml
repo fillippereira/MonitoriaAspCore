@@ -1,0 +1,35 @@
+@using Microsoft.AspNetCore.Identity
+@using MonitoriaAspCore.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    var urlImage = "~/images/user/" + @User.FindFirst("ImagemPerfil").Value;
+    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-bell"></i><span class="badge badge-pill badge-danger" style="position:relative;left:-4px;top:-10px">1</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-envelope"></i></a></li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                   <img class="rounded-circle m-0" style="width: 30px;height:30px" src="@Url.Content(urlImage)" alt="User picture">
+                    @UserManager.GetUserName(User)
+
+                </a>
+                <div class="dropdown-menu float-left">
+                    <a class="dropdown-item border-bottom" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><i class="fa fa-user"></i> Meu perfil</a>
+                    <a class="dropdown-item" href="/Account/Logout"><i class="fa fa-sign-out"></i> Sair</a>
+                </div>
+            </li>
+        </ul>
+    </form>
+}
+else
+{
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+        <li class="nav-item"><a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+    </ul>
+}
