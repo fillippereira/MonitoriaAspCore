@@ -36,9 +36,9 @@
 
 
         var urlImage = "~/images/user/" + @User.FindFirst("ImagemPerfil").Value;
-        var Nome = @User.Identity.Name;
+        var Nome = @User.FindFirst("Nome");
 
-        if (User.FindFirst("Tema").Value == "Padrão")
+        if (User.FindFirst("Tema").Value == "Escuro")
         {
             navClass = " bg-dark navbar-dark ";
         }
@@ -63,7 +63,7 @@
         <!-- navegação -->
         <div class="row">
             <div class="col-md-12 p-0">
-                <nav class="navbar navbar-expand-sm {@navClass}  shadow-sm" style="opacity:0.95">
+                <nav class="navbar navbar-expand-sm @navClass  shadow-sm" style="opacity:0.95">
                     <div class="container-fluid">
                         <div class="navbar-header w-25">
                             <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Monitoria</a>
@@ -84,14 +84,14 @@
                         </div>
                     </div>
                 </nav>
-                <partial name="_CookieConsentPartial" />
+               
             </div>
         </div>
         <!-- navegação -->
         <!-- menu lateral -->
         <div class="row h-100">
             <div class="col-md-2 h-100 p-0">
-                <nav class="nav {@navClass} h-100">
+                <nav class="nav @navClass h-100">
                     <div class="container-fluid h-100">
 
                         <ul class="navbar-nav">

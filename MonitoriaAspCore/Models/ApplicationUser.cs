@@ -11,10 +11,10 @@ namespace MonitoriaAspCore.Models
     public class ApplicationUser : IdentityUser
     {
         public string Cpf { get; set; }
-        //public string UserName { get; set; }
+        public override string UserName { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
-        //public string Email { get; set; }
+        public override string Email { get; set; }
         public string Theme { get; set; }
         public string UrlImage { get; set; }
         //public object DefaultAuthenticationTypes { get; private set; }
