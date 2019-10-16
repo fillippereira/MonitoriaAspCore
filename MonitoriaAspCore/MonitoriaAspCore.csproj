@@ -15,9 +15,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Services\" />
-    <Folder Include="Areas\Monitoria\Controllers\" />
     <Folder Include="Areas\Monitoria\Data\" />
-    <Folder Include="Areas\Monitoria\Views\" />
   </ItemGroup>
 
 </Project>
