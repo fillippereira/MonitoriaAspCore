@@ -5,6 +5,11 @@
     ViewData["Title"] = "Monitoria - Efetuar Login";
 }
 <title>@ViewData["Title"]</title>
+@if(ViewData["StatusMessage"] != null)
+{
+    ViewData["StatusMessage"].ToString();
+
+}
 
 
 <environment include="Development">

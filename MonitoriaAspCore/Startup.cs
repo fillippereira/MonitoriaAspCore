@@ -45,9 +45,11 @@ namespace MonitoriaAspCore
 
             services.AddScoped<SignInManager<ApplicationUser>, SignInManager<ApplicationUser>>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddSessionStateTempDataProvider();
+                services.AddSession();
 
-            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,7 +71,8 @@ namespace MonitoriaAspCore
             app.UseCookiePolicy();
 
             app.UseAuthentication();
-
+            app.UseSession();
+            app.UseMvcWithDefaultRoute();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

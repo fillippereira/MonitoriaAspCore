@@ -30,34 +30,51 @@ namespace MonitoriaAspCore.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [EmailAddress]
-            public string Email { get; set; }
+            [Display(Name ="Login")]
+            public string UserName{ get; set; }
+
+            [Required]
+            [DataType(DataType.Password)]
+            public string Password { get; set; }
+
+            [DataType(DataType.Password)]
+            [Display(Name = "Confirm password")]
+            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            public string ConfirmPassword { get; set; }
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByEmailAsync(Input.Email);
-                if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
+                var user = await _userManager.FindByNameAsync(Input.UserName);
+                /*if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
                 {
                     // Don't reveal that the user does not exist or is not confirmed
                     return RedirectToPage("./ForgotPasswordConfirmation");
-                }
+                }*/
+                var newPassword = _userManager.PasswordHasher.HashPassword(user,Input.Password);
+                user.PasswordHash = newPassword;
+                var result = await _userManager.UpdateAsync(user);
 
+                if (result.Succeeded)
+                {
+                    ViewData["StatusMessage"] = "Senha alterada com sucesso!";
+                    return RedirectToPage("./Login");
+                }
                 // For more information on how to enable account confirmation and password reset please 
                 // visit https://go.microsoft.com/fwlink/?LinkID=532713
-                var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+               /* var code = await _userManager.GeneratePasswordResetTokenAsync(user);
                 var callbackUrl = Url.Page(
                     "/Account/ResetPassword",
                     pageHandler: null,
                     values: new { code },
-                    protocol: Request.Scheme);
+                    protocol: Request.Scheme);*/
 
-                await _emailSender.SendEmailAsync(
+               /* await _emailSender.SendEmailAsync(
                     Input.Email,
                     "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");*/
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }

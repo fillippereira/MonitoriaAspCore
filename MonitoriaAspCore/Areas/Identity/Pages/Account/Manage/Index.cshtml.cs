@@ -212,6 +212,7 @@ namespace MonitoriaAspCore.Areas.Identity.Pages.Account.Manage
 
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";
+            TempData["StatusMessage"] = "Your profile has been updated";
             return RedirectToPage();
         }
 
