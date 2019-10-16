@@ -71,13 +71,23 @@ namespace MonitoriaAspCore
             app.UseCookiePolicy();
 
             app.UseAuthentication();
+
             app.UseSession();
             app.UseMvcWithDefaultRoute();
+
+
+
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                  name: "areas",
+                  template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+                routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}"
+                );
             });
         }
     }

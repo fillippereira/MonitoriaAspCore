@@ -50,3 +50,65 @@ C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netc
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netcoreapp2.1\MonitoriaAspCore.deps.json
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netcoreapp2.1\MonitoriaAspCore.runtimeconfig.json
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netcoreapp2.1\MonitoriaAspCore.runtimeconfig.dev.json
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netcoreapp2.1\MonitoriaAspCore.dll
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netcoreapp2.1\MonitoriaAspCore.pdb
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netcoreapp2.1\MonitoriaAspCore.Views.dll
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netcoreapp2.1\MonitoriaAspCore.Views.pdb
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.csprojAssemblyReference.cache
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.csproj.CoreCompileInputs.cache
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.RazorAssemblyInfo.cache
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.RazorAssemblyInfo.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.AssemblyInfoInputs.cache
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.AssemblyInfo.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.TagHelpers.input.cache
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.TagHelpers.output.cache
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.RazorCoreGenerate.cache
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\AccessDenied.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ForgotPassword.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Lockout.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\ChangePassword.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\Index.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\SetPassword.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_Layout.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_StatusMessage.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ResetPassword.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.RazorTargetAssemblyInfo.cache
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.RazorTargetAssemblyInfo.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.Views.pdb
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.dll
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.pdb
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.csproj.CopyComplete
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Create.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Delete.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Details.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Edit.g.cshtml.cs
+C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Index.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Create.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Delete.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Details.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Edit.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Index.g.cshtml.cs

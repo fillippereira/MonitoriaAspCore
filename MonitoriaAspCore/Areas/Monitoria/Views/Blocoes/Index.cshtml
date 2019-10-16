@@ -1,0 +1,94 @@
+﻿
+@model IEnumerable<MonitoriaAspCore.Areas.Monitoria.Models.Bloco>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Index";
+}
+
+<div class="content-fluid">
+    <form action="" method="POST" class="my-3">
+        <h6>Informação do Checklist:</h6>
+        <div class="form-row">
+            <div class="form-group col-4">
+                <label for="name_checklist">Nome do checklist:</label>
+                <input type="text" class="form-control" name="name_checklist" id="name_checklist" placeholder="Nome do checklist." maxlength="40">
+                <small class="text-muted">
+                    O nome deve ter no máximo 40 Caracteres.
+                </small>
+            </div>
+            <div class="form-group col-6">
+                <label for="descricao">Descrição do checklist:</label>
+                <input type="text" name="descricao" id="descricao" maxlength="60" class="form-control" placeholder="Descrição detalhada do checklist." />
+                <small class="text-muted">
+                    A descrição deve ter no máximo 60 Caracteres.
+                </small>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-3">
+                <label for="tipo_checklist">Tipo Checklist:</label>
+                <select name="tipo_checklist" id="tipo_checklist" class="form-control">
+                    <option value="diagnostico">Diagnóstico</option>
+                    <option value="decremental">Monitoria Decremental</option>
+                    <option value="avaliativa">Avaliativa</option>
+                </select>
+            </div>
+            <div class="form-group col-3">
+                <label for="status_checklist">Status:</label>
+                <select name="status_checklist" id="status_checklist" class="form-control">
+                    <option value="diagnostico">Ativo</option>
+                    <option value="decremental">Inativo</option>
+                </select>
+            </div>
+        </div>
+        <hr class="mb-3" />
+        <h6>Campanhas Elegíveis:</h6>
+        <div class="row">
+            <div class="col bg-white border rounded p-2 mx-3">
+                <div class="w-100 d-flex justify-content-between">
+                    <h6 class="p-1">Produtos:</h6>
+                    <button type="button" class="btn btn-sm btn-outline-dark">
+                        <span class="fas fa-check-double"></span>
+                    </button>
+                </div>
+                <hr class="my-1" />
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" name="produtos" class="custom-control-input" id="produto_3" value="3" />
+                    <label class="custom-control-label" for="produto_3">Claro</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" name="produtos" id="produto_20" class="custom-control-input" value="20" />
+                    <label class="custom-control-label" for="produto_20">Vivo</label>
+                </div>
+            </div>
+            <div class="col bg-white border rounded p-2 mx-3">
+                <div class="w-100 d-flex justify-content-between">
+                    <h6 class="p-1">Operações:</h6>
+                    <button type="button" class="btn btn-sm btn-outline-dark">
+                        <span class="fas fa-check-double"></span>
+                    </button>
+                </div>
+                <hr class="my-1" />
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" name="operacoes" class="custom-control-input" id="operacoes_1" value="1" />
+                    <label class="custom-control-label" for="operacoes_1">Claro Pre</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" name="operacoes_2" id="operacoes_2" class="custom-control-input" value="2" />
+                    <label class="custom-control-label" for="operacoes_2">Claro Controle</label>
+                </div>
+            </div>
+            <div class="col bg-white border rounded p-2 mx-3">
+                <div class="w-100 d-flex justify-content-between">
+                    <h6 class="p-1">Campanhas:</h6>
+                    <button type="button" class="btn btn-sm btn-outline-dark d-none">
+                        <span class="fas fa-check-double"></span>
+                    </button>
+                </div>
+                <hr class="my-1" />
+                <p class="text-muted">Selecione uma Operação...</p>
+            </div>
+        </div>
+    </form>
+</div>

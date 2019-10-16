@@ -77,7 +77,7 @@ using MonitoriaAspCore.Areas.Identity.Pages.Account.Manage;
             WriteLiteral("\r\n<h2>Configurações da conta  </h2>\r\n\r\n<div>\r\n    \r\n    <hr />\r\n    <div class=\"row\">\r\n        <div class=\"col-md-3 col-lg-2\">\r\n            <ul class=\"nav nav-pills\">\r\n                <li class=\"nav-item w-100\">");
             EndContext();
             BeginContext(268, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ce33aacbdb5041aeb3f2c46c4ab6f03a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c0ebd2f2f554e1eb7f12e8ba194c27e", async() => {
                 BeginContext(350, 7, true);
                 WriteLiteral("Profile");
                 EndContext();
@@ -107,7 +107,7 @@ AddHtmlAttributeValue(" ", 286, ManageNavPages.IndexNavClass(ViewContext), 287, 
             WriteLiteral("</li>\r\n                <li class=\"nav-item w-100\">");
             EndContext();
             BeginContext(411, 133, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6749ed3393fe4c5ea8980b26102a5ffa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7057b9a1d6b344e3ac63bf9bc65efd8b", async() => {
                 BeginContext(532, 8, true);
                 WriteLiteral("Password");
                 EndContext();

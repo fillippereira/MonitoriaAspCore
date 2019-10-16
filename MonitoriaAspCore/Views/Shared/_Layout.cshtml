@@ -104,10 +104,8 @@
                                     <i class="fa fa-file"></i> Gerenciar Formulários
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="/Monitoria/Ficha"> Fichas </a>
-                                    <a class="dropdown-item" href="/Monitoria/Bloco">Blocos</a>
-                                    <a class="dropdown-item" href="/Monitoria/Pergunta">Perguntas</a>
-                                    <a class="dropdown-item" href="/Monitoria/Resposta">Respostas</a>
+                                    <a class="dropdown-item" asp-area="Monitoria" asp-controller="Blocoes">Nova Ficha</a>
+                                    <a class="dropdown-item" asp-area="Monitoria" asp-controller="Blocoes" asp-action="Edit">Editar Ficha</a>
                                 </div>
                             </li>
                         </ul>
