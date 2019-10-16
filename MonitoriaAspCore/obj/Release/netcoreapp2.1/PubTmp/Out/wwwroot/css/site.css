@@ -1,0 +1,50 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+
+body, html {
+    height: 100%;
+    padding: 0;
+}
+
+
+/* Carousel 
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+
+#qrCode {
+    margin: 15px;
+}
+
+
+@media screen and (max-width: 767px) {
+ 
+    .carousel-caption {
+        display: none;
+    }
+}*/
+
+#DivAlterarFoto:hover {
+    background-color: lightgray;
+    opacity: 0.7;
+    cursor: pointer
+}
+
+#DivAlterarFoto p {
+    color: transparent;
+}
+
+#DivAlterarFoto:hover p {
+    color: black;
+}
+
+.p-35 {
+    padding-top: 35% !important;
+}

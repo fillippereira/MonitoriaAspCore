@@ -24,3 +24,9 @@ function readURL(input) {
 $("input[type=file]").change(function () {
     readURL(this);
 });
+
+
+function Logout() {
+
+    $("#LogoutForm").submit();
+}

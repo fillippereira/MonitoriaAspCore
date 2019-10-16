@@ -37,12 +37,14 @@ body, html {
     cursor: pointer
 }
 
-#DivAlterarFoto p {
+#DivAlterarFoto p, #DivAlterarFoto span, #DivAlterarFoto svg {
     color: transparent;
+    fill:transparent
 }
 
-#DivAlterarFoto:hover p {
+#DivAlterarFoto:hover p, #DivAlterarFoto:hover span, #DivAlterarFoto:hover svg {
     color: black;
+    fill: black
 }
 
 .p-35 {
