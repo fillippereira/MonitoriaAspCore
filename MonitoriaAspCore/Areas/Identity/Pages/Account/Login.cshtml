@@ -6,6 +6,7 @@
 }
 <title>@ViewData["Title"]</title>
 
+@TempData["example"];
 
 <environment include="Development">
     <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.css" />
@@ -14,11 +15,15 @@
 </environment>
 <environment exclude="Development">
     <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/lib/font-awesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
     <link rel="stylesheet" href="~/css/estilo.min.css?version=12" />
 </environment>
 
-
+<div class="row">
+    <div class="col-md-12 p-0">
+        @(Html.Raw(TempData["StatusMessage"]))
+    </div>
+</div>
 <div class="container-login100">
     <div class="wrap-login100">
         <form method="post" class="login100-form validate-form">

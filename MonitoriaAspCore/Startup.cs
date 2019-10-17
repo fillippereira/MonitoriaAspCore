@@ -36,6 +36,11 @@ namespace MonitoriaAspCore
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.Configure<CookieTempDataProviderOptions>(options =>
+            {
+                options.Cookie.IsEssential = true;
+            });
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -67,7 +72,6 @@ namespace MonitoriaAspCore
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             app.UseAuthentication();
 
 
