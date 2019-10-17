@@ -23,7 +23,11 @@
     <link rel="stylesheet" href="~/css/estilo.min.css?version=12" />
 </environment>
 
-
+<div class="row">
+    <div class="col-md-12 p-0">
+        @(Html.Raw(TempData["StatusMessage"]))
+    </div>
+</div>
 <div class="container-login100">
     <div class="wrap-login100">
         <form method="post" class="login100-form validate-form">
@@ -32,7 +36,7 @@
                 <img src="~/Images/icon.png" class="img-fluid" style="width:80%" />
             </span>
 
-            <div asp-validation-summary="All" class="text-danger"></div>
+            
             <div class="wrap-input100 m-b-23">
                 <input asp-for="Input.UserName" class="input100" />
                 <span class="focus-input100-login" data-placeholder="Login"></span>
@@ -56,6 +60,7 @@
             </div>
 
             <div class="container-login100-form-btn p-b-31">
+                <div asp-validation-summary="All" class="text-danger border border-danger rounded mb-3 w-100"></div>
                 <button class="btn btn-outline-secondary w-100">
                     Login
                 </button>

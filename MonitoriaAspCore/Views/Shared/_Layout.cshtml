@@ -104,8 +104,8 @@
                                     <i class="fa fa-file"></i> Gerenciar Formulários
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" asp-area="Monitoria" asp-controller="Blocoes">Nova Ficha</a>
-                                    <a class="dropdown-item" asp-area="Monitoria" asp-controller="Blocoes" asp-action="Edit">Editar Ficha</a>
+                                    <a class="dropdown-item" asp-area="Monitoria" asp-controller="Blocos">Nova Ficha</a>
+                                    <a class="dropdown-item" asp-area="Monitoria" asp-controller="Blocos" asp-action="Edit">Editar Ficha</a>
                                 </div>
                             </li>
                         </ul>
@@ -114,16 +114,10 @@
             </div>
             <div class="col-md-9 col-lg-10 bg-light">
                 <div class="row">
-                    @if (TempData["StatusMessage"] != null)
-                    {
-                        <div class="col-md-12 p-0">
-                            <div class="alert alert-success alert-dismissible text-center shadow-sm">
-                                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                <strong></strong> @TempData["StatusMessage"]
-                            </div>
-                        </div>
-                    }
-
+                    <div class="col-md-12 p-0">
+                         @Html.Raw(TempData["StatusMessage"])
+                        
+                    </div>
                 </div>
                 @RenderBody()
                 <hr />

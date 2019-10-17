@@ -6,9 +6,8 @@
     box-sizing: border-box
 }
 
-body, html {
-    height: 100%;
-    padding: 0;
+.validation-summary-valid{
+    display:none!important;
 }
 
 body {
@@ -266,6 +265,7 @@ iframe {
         color: #999;
         line-height: 1.2;
         content: attr(data-placeholder);
+        font-weight: 900;
         display: block;
         width: 100%;
         position: absolute;
@@ -331,6 +331,7 @@ iframe {
         color: #999;
         line-height: 1.2;
         content: "\f007" " " attr(data-placeholder);
+        font-weight: 900;
         display: block;
         width: 100%;
         position: absolute;
@@ -403,6 +404,7 @@ iframe {
         color: #999;
         line-height: 1.2;
         content: "\f023" " " attr(data-placeholder);
+        font-weight: 900;
         display: block;
         width: 100%;
         position: absolute;
@@ -430,6 +432,79 @@ iframe {
 .has-val.input100 + .focus-input100-senha::before {
     width: 100%
 }
+
+
+
+
+
+
+
+
+
+.focus-input100-cpf {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none
+}
+
+    .focus-input100-cpf::before {
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        -moz-transition: all .4s;
+        transition: all .4s;
+        background: #6a7dfe;
+        background: -webkit-linear-gradient(left,#21d4fd,#b721ff);
+        background: -o-linear-gradient(left,#21d4fd,#b721ff);
+        background: -moz-linear-gradient(left,#21d4fd,#b721ff);
+        background: linear-gradient(left,#21d4fd,#b721ff)
+    }
+
+    .focus-input100-cpf::after {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 15px;
+        color: #999;
+        line-height: 1.2;
+        content: "\f2bb" " " attr(data-placeholder);
+        font-weight: 900;
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 16px;
+        left: 0;
+        padding-left: 5px;
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        -moz-transition: all .4s;
+        transition: all .4s
+    }
+
+.input100:focus + .focus-input100-cpf::after {
+    top: -10px
+}
+
+.input100:focus + .focus-input100-cpf::before {
+    width: 100%
+}
+
+.has-val.input100 + .focus-input100-cpf::after {
+    top: -10px
+}
+
+.has-val.input100 + .focus-input100-cpf::before {
+    width: 100%
+}
+
+
 
 .btn-user {
     font-size: 15px;
@@ -606,6 +681,7 @@ iframe {
 .alert-validate::after {
     content: "\f06a";
     font-family: FontAwesome;
+    font-weight: 900;
     font-size: 16px;
     color: #c80000;
     display: block;

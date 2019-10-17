@@ -2,7 +2,6 @@ C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netc
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netcoreapp2.1\MonitoriaAspCore.runtimeconfig.json
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netcoreapp2.1\MonitoriaAspCore.runtimeconfig.dev.json
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\bin\Debug\netcoreapp2.1\MonitoriaAspCore.dll
-C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.csprojAssemblyReference.cache
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.csproj.CoreCompileInputs.cache
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.RazorAssemblyInfo.cache
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.RazorAssemblyInfo.cs
@@ -112,3 +111,4 @@ C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netc
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Details.g.cshtml.cs
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Edit.g.cshtml.cs
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Index.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.csprojAssemblyReference.cache
