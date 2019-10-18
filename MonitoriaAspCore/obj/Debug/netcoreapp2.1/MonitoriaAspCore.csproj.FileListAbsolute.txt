@@ -106,9 +106,15 @@ C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\n
 C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Details.g.cshtml.cs
 C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Edit.g.cshtml.cs
 C:\Users\gerso\Documents\Monitoria\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Index.g.cshtml.cs
-C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Create.g.cshtml.cs
-C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Delete.g.cshtml.cs
-C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Details.g.cshtml.cs
-C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Edit.g.cshtml.cs
-C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocoes\Index.g.cshtml.cs
 C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\MonitoriaAspCore.csprojAssemblyReference.cache
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocos\Create.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocos\Delete.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocos\Details.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocos\Edit.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Monitoria\Views\Blocos\Index.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Administracao\Views\Users\Index.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Administracao\Views\Users\Create.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Administracao\Views\_ViewImports.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Administracao\Views\_ViewStart.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Administracao\Views\Users\Edit.g.cshtml.cs
+C:\Users\Fillip Pereira\Desktop\MonitoriaAspCore\MonitoriaAspCore\obj\Debug\netcoreapp2.1\Razor\Areas\Administracao\Views\Users\Delete.g.cshtml.cs

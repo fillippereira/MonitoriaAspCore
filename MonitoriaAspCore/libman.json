@@ -14,13 +14,19 @@
       "provider": "cdnjs",
       "library": "popper.js@1.15.0",
       "destination": "wwwroot/lib/popper.js/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "bootstrap@4.3.1",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "bootstrap-multiselect@0.9.15",
+      "destination": "wwwroot/lib/bootstrap-multiselect/"
+    },
+    {
+      "library": "multiselect@2.2.9",
+      "destination": "wwwroot/lib/multiselect/"
     }
-    
-  ,
-{
-  "provider": "unpkg",
-  "library": "bootstrap@4.3.1",
-  "destination": "wwwroot/lib/bootstrap/"
-}
-]
+  ]
 }

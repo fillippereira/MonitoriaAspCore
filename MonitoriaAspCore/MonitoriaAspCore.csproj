@@ -6,6 +6,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Administracao\Views\Usuarios\**" />
+    <Compile Remove="wwwroot\lib\multiselect\**" />
+    <Content Remove="Areas\Administracao\Views\Usuarios\**" />
+    <Content Remove="wwwroot\lib\multiselect\**" />
+    <EmbeddedResource Remove="Areas\Administracao\Views\Usuarios\**" />
+    <EmbeddedResource Remove="wwwroot\lib\multiselect\**" />
+    <None Remove="Areas\Administracao\Views\Usuarios\**" />
+    <None Remove="wwwroot\lib\multiselect\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Administracao\Controllers\UsuariosController.cs" />
+    <Compile Remove="Migrations\20191018151803_bloco.cs" />
+    <Compile Remove="Migrations\20191018151803_bloco.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.3.1" />
     <PackageReference Include="FontAwesome" Version="4.7.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -14,10 +31,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Administracao\Data\" />
     <Folder Include="Areas\Identity\Services\" />
     <Folder Include="Areas\Monitoria\Data\" />
     <Folder Include="Data\Migrations\" />
-    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Areas\Administracao\Views\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Administracao\Views\_ViewStart.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -17,7 +17,8 @@ namespace MonitoriaAspCore.Models
         public override string Email { get; set; }
         public string Theme { get; set; }
         public string UrlImage { get; set; }
-        //public object DefaultAuthenticationTypes { get; private set; }
+
+        public ICollection<ApplicationUserRole> UserRoles { get; set; }
 
         public class MyUserClaimsPrincipalFactory : UserClaimsPrincipalFactory<ApplicationUser>
         {

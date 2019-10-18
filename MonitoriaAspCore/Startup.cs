@@ -44,7 +44,9 @@ namespace MonitoriaAspCore
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddDefaultIdentity<ApplicationUser>()
+                .AddRoles<ApplicationRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddClaimsPrincipalFactory<MyUserClaimsPrincipalFactory>();
 
@@ -56,7 +58,7 @@ namespace MonitoriaAspCore
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -87,6 +89,26 @@ namespace MonitoriaAspCore
                     template: "{controller=Home}/{action=Index}/{id?}"
                 );
             });
+                CreateRoles(serviceProvider).Wait();
+
+        }
+
+
+
+        private async Task CreateRoles(IServiceProvider serviceProvider)
+        {
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<ApplicationRole>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+            string[] rolesNames = { "Colaborador", "Monitor", "Supervisor", "Coordenador", "Gerente", "Diretor", "Administrador" };
+            IdentityResult result;
+            foreach (var namesRole in rolesNames)
+            {
+                var roleExist = await roleManager.RoleExistsAsync(namesRole);
+                if (!roleExist)
+                {
+                    result = await roleManager.CreateAsync(new ApplicationRole(namesRole));
+                }
+            }
         }
     }
 }

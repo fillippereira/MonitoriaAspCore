@@ -1,0 +1,55 @@
+﻿
+@model User
+@{ Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<div class="container-login100">
+    <div class="wrap-login100 w-50">
+        <form method="post">
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label asp-for="Cpf"></label>
+                            <input asp-for="Cpf" class="form-control form-control-sm" />
+                            <span asp-validation-for="Cpf" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="UserName"></label>
+                            <input asp-for="UserName" class="form-control form-control-sm" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" class="form-control form-control-sm" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="Gender"></label>
+                            <Select asp-for="Gender" class="form-control form-control-sm">
+                                <option value="">Selecione</option>
+                                <option>M</option>
+                                <option>F</option>
+                            </Select>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control form-control-sm" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="col-md-12 container-login100-form-btn p-b-3">
+                            <button type="submit" class="btn btn-sm btn-outline-secondary w-100">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -30,3 +30,6 @@ function Logout() {
 
     $("#LogoutForm").submit();
 }
+
+
+$('.multiSelect').multiselect();

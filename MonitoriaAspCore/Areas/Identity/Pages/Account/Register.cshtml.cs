@@ -93,7 +93,7 @@ namespace MonitoriaAspCore.Areas.Identity.Pages.Account
                     Gender = Input.Gender,
                     Email = Input.Email,
                     Theme = "Escuro",
-                    UrlImage = "user.png"};
+                    UrlImage = "user.jpg"};
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
