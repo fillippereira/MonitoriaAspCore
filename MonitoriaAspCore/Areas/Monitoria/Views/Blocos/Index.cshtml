@@ -7,88 +7,290 @@
 }
 
 <div class="content-fluid">
-    <form action="" method="POST" class="my-3">
-        <h6>Informação do Checklist:</h6>
-        <div class="form-row">
-            <div class="form-group col-4">
-                <label for="name_checklist">Nome do checklist:</label>
-                <input type="text" class="form-control" name="name_checklist" id="name_checklist" placeholder="Nome do checklist." maxlength="40">
-                <small class="text-muted">
-                    O nome deve ter no máximo 40 Caracteres.
-                </small>
-            </div>
-            <div class="form-group col-6">
-                <label for="descricao">Descrição do checklist:</label>
-                <input type="text" name="descricao" id="descricao" maxlength="60" class="form-control" placeholder="Descrição detalhada do checklist." />
-                <small class="text-muted">
-                    A descrição deve ter no máximo 60 Caracteres.
-                </small>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-3">
-                <label for="tipo_checklist">Tipo Checklist:</label>
-                <select name="tipo_checklist" id="tipo_checklist" class="form-control">
-                    <option value="diagnostico">Diagnóstico</option>
-                    <option value="decremental">Monitoria Decremental</option>
-                    <option value="avaliativa">Avaliativa</option>
-                </select>
-            </div>
-            <div class="form-group col-3">
-                <label for="status_checklist">Status:</label>
-                <select name="status_checklist" id="status_checklist" class="form-control">
-                    <option value="diagnostico">Ativo</option>
-                    <option value="decremental">Inativo</option>
-                </select>
-            </div>
-        </div>
-        <hr class="mb-3" />
-        <h6>Campanhas Elegíveis:</h6>
-        <div class="row">
-            <div class="col bg-white border rounded p-2 mx-3">
-                <div class="w-100 d-flex justify-content-between">
-                    <h6 class="p-1">Produtos:</h6>
-                    <button type="button" class="btn btn-sm btn-outline-dark">
-                        <span class="fas fa-check-double"></span>
-                    </button>
+    <form action="" method="POST" class="mt-3">
+        
+            <div class="card shadow my-3 bloco">
+                <div class="card-header">
+                    <h6>Dados do formulário</h6>
                 </div>
-                <hr class="my-1" />
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" name="produtos" class="custom-control-input" id="produto_3" value="3" />
-                    <label class="custom-control-label" for="produto_3">Claro</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" name="produtos" id="produto_20" class="custom-control-input" value="20" />
-                    <label class="custom-control-label" for="produto_20">Vivo</label>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 border rounded p-2 ">
+                            <div class="w-100 d-flex justify-content-between">
+                                <h6 class="p-1">Itens obrigatórios:</h6>
+                            </div>
+                            <hr class="my-1" />
+                            <div class="row">
+                                <div class="form-group col-4">
+                                    <label for="name_checklist">Nome do checklist:</label>
+                                    <input type="text" class="form-control form-control-sm" name="name_checklist" id="name_checklist" placeholder="EX.: Checklist avaliação do Naruto" maxlength="40">
+                                    <small class="text-muted">
+                                        O nome deve ter no máximo 40 Caracteres.
+                                    </small>
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="descricao">Descrição do checklist:</label>
+                                    <input type="text" name="descricao" id="descricao" maxlength="60" class="form-control form-control-sm" placeholder="Ex.: O Naruto pode ser um pouco duro às vezes, talvez você não saiba disso, mas o Naruto também cresceu sem pai." />
+                                    <small class="text-muted">
+                                        A descrição deve ter no máximo 60 Caracteres.
+                                    </small>
+                                </div>
+
+                                <div class="form-group col-3">
+                                    <label for="tipo_checklist">Tipo Checklist:</label>
+                                    <select name="tipo_checklist" id="tipo_checklist" class="form-control form-control-sm">
+                                        <option value="diagnostico">Diagnóstico</option>
+                                        <option value="decremental">Monitoria Decremental</option>
+                                        <option value="avaliativa">Avaliativa</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-1">
+                                   <label>Status</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" name="status" class="custom-control-input" checked value="1" />
+                                        <label class="custom-control-label" for="operacoes_1">Habilitado</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-8 border rounded p-2 mt-3">
+                            <div class="w-100 d-flex justify-content-between">
+                                <h6 class="p-1">Itens personalizaveis:</h6>
+                                <button type="button" class="btn btn-sm btn-outline-info" onclick="AddCustomItem()"><i class="fa fa-plus"></i></button>
+                            </div>
+                            <hr class="my-1" />
+                            <div class="row" id="DivCustomItens">
+                                <div id="DivNoItem" class="col-12 text-center mt-5">
+                                    <label>Nenhum item foi adicionado</label>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div class="col-4 mt-3">
+                            <div class="col-12 border rounded p-2 ">
+                                <div class="w-100 d-flex justify-content-between">
+                                    <h6 class="p-1">Sugestão do editor:</h6>
+                                </div>
+                                <hr class="my-1" />
+
+                                <div class="row">
+                                    <div class="col-12 mt-1">
+                                        <div class="card">
+                                            <div class="card-header bg-white">
+                                                <div class="row">
+                                                    <div class="col-2 text-left">
+                                                        <button class="btn btn-sm" type="button" onclick="ToggleCustomItem(this)"><i class="fa fa-angle-right fa-lg"></i></button>
+                                                    </div>
+                                                    <div class="col-10 pl-0">
+                                                        <label>Almope avaliado</label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="card-body collapse">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <label>Formato</label>
+                                                        <select class="form-control form-control-sm" disabled>
+                                                            <option class="d-none">Texto</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-3">
+                                                        <label>Caracteres</label>
+                                                        <input type="number" value="10" max="10" class="form-control form-control-sm" disabled />
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <label>Colunas</label>
+                                                        <select class="form-control form-control-sm">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <label>Obrigatório</label>
+                                                        <select class="form-control form-control-sm" disabled>
+                                                            <option class="d-none">Sim</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-12 mt-1">
+                                        <div class="card">
+                                            <div class="card-header bg-white">
+                                                <div class="row">
+                                                    <div class="col-2 text-left">
+                                                        <button class="btn btn-sm" type="button" onclick="ToggleCustomItem(this)"><i class="fa fa-angle-right fa-lg"></i></button>
+                                                    </div>
+                                                    <div class="col-10 pl-0">
+                                                        <label>Almope avaliador</label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="card-body collapse">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <label>Formato</label>
+                                                        <select class="form-control form-control-sm" disabled>
+                                                            <option class="d-none">Texto</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-3">
+                                                        <label>Caracteres</label>
+                                                        <input type="number" value="10" max="10" class="form-control form-control-sm" disabled />
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <label>Colunas</label>
+                                                        <select class="form-control form-control-sm">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <label>Obrigatório</label>
+                                                        <select class="form-control form-control-sm" disabled>
+                                                            <option class="d-none">Sim</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="col bg-white border rounded p-2 mx-3">
-                <div class="w-100 d-flex justify-content-between">
-                    <h6 class="p-1">Operações:</h6>
-                    <button type="button" class="btn btn-sm btn-outline-dark">
-                        <span class="fas fa-check-double"></span>
-                    </button>
+
+            <div class="card shadow mt-3 bloco">
+                <div class="card-header">
+                    <label class="d-inline">1.</label> <input type="text" class="form-control d-inline w-25" placeholder="Bloco sem nome" />
                 </div>
-                <hr class="my-1" />
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" name="operacoes" class="custom-control-input" id="operacoes_1" value="1" />
-                    <label class="custom-control-label" for="operacoes_1">Claro Pre</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" name="operacoes_2" id="operacoes_2" class="custom-control-input" value="2" />
-                    <label class="custom-control-label" for="operacoes_2">Claro Controle</label>
+                <div class="card-body">
+                    <div class="row pergunta">
+                        <div class="form-group col-6">
+                            <label for="name_checklist">1.1. Pergunta:</label>
+                            <input type="text" class="form-control" placeholder="Pergunta em branco">
+
+                        </div>
+                        <div class="form-group col-2">
+                            <label for="descricao">Tipo de resposta:</label>
+                            <select class="form-control">
+                                <option>Resposta Única</option>
+                                <option>Múltiplas respostas</option>
+                                <option>Lista</option>
+                                <option>Texto</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-2">
+                            <label for="descricao">Peso:</label>
+                            <input type="number" class="form-control" placeholder="0 - 100">
+                        </div>
+                        <div class="form-group col-2">
+                            <label for="descricao">Max. Caracter:</label>
+                            <input type="number" class="form-control">
+                        </div>
+
+                        <div class="form-group col-6">
+
+                            <input type="text" class="form-control" placeholder="Resposta em branco">
+
+                        </div>
+                        <div class="form-group col-4">
+
+                            <select class="form-control">
+                                <option>Resposta Única</option>
+                                <option>Múltiplas respostas</option>
+                                <option>Lista</option>
+                                <option>Texto</option>
+                            </select>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="col bg-white border rounded p-2 mx-3">
-                <div class="w-100 d-flex justify-content-between">
-                    <h6 class="p-1">Campanhas:</h6>
-                    <button type="button" class="btn btn-sm btn-outline-dark d-none">
-                        <span class="fas fa-check-double"></span>
-                    </button>
-                </div>
-                <hr class="my-1" />
-                <p class="text-muted">Selecione uma Operação...</p>
+            <div class="form-row">
+
             </div>
-        </div>
-    </form>
+            <hr class="mb-3" />
+            <h6>Campanhas Elegíveis:</h6>
+            <div class="row">
+                <div class="col bg-white border rounded p-2 mx-3">
+                    <div class="w-100 d-flex justify-content-between">
+                        <h6 class="p-1">Produtos:</h6>
+                        <button type="button" class="btn btn-sm btn-outline-dark">
+                            <span class="fas fa-check-double"></span>
+                        </button>
+                    </div>
+                    <hr class="my-1" />
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="produtos" class="custom-control-input" id="produto_3" value="3" />
+                        <label class="custom-control-label" for="produto_3">Claro</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="produtos" id="produto_20" class="custom-control-input" value="20" />
+                        <label class="custom-control-label" for="produto_20">Vivo</label>
+                    </div>
+                </div>
+                <div class="col bg-white border rounded p-2 mx-3">
+                    <div class="w-100 d-flex justify-content-between">
+                        <h6 class="p-1">Operações:</h6>
+                        <button type="button" class="btn btn-sm btn-outline-dark">
+                            <span class="fas fa-check-double"></span>
+                        </button>
+                    </div>
+                    <hr class="my-1" />
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="operacoes" class="custom-control-input" id="operacoes_1" value="1" />
+                        <label class="custom-control-label" for="operacoes_1">Claro Pre</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="operacoes_2" id="operacoes_2" class="custom-control-input" value="2" />
+                        <label class="custom-control-label" for="operacoes_2">Claro Controle</label>
+                    </div>
+                </div>
+                <div class="col bg-white border rounded p-2 mx-3">
+                    <div class="w-100 d-flex justify-content-between">
+                        <h6 class="p-1">Campanhas:</h6>
+                        <button type="button" class="btn btn-sm btn-outline-dark d-none">
+                            <span class="fas fa-check-double"></span>
+                        </button>
+                    </div>
+                    <hr class="my-1" />
+                    <p class="text-muted">Selecione uma Operação...</p>
+                </div>
+            </div>
+</form>
 </div>

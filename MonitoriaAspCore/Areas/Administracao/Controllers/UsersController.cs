@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -15,7 +16,6 @@ namespace MonitoriaAspCore.Areas.Administracao.Controllers
 {   [Area("Administracao")]
     public class UsersController : Controller
     {
-        
         private readonly UserManager<ApplicationUser> userManager;
 
         public UsersController(UserManager<ApplicationUser> userManager)
@@ -23,14 +23,12 @@ namespace MonitoriaAspCore.Areas.Administracao.Controllers
             this.userManager = userManager;
         }
 
-        
-
         public async Task<IActionResult> Index()
         {
             return View(userManager.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).ToList());
         }
-
-
+           
+        [Authorize(Roles="Administrador")]
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -38,7 +36,7 @@ namespace MonitoriaAspCore.Areas.Administracao.Controllers
         }
         [HttpPost]
         public async Task<IActionResult> Create(User user)
-        {
+        { var Message = new AppMessage();
             if (ModelState.IsValid)
             {
                 var NewUser = new ApplicationUser
@@ -54,7 +52,11 @@ namespace MonitoriaAspCore.Areas.Administracao.Controllers
 
                 IdentityResult result = await userManager.CreateAsync(NewUser, "Mc#2019");
                 if (result.Succeeded)
+                {
+                    Message = new AppMessage("Usuário criado com sucesso!", "success");
+                    TempData["StatusMessage"] = Message.Message;
                     return RedirectToAction("Index");
+                }
                 else
                 {
                     foreach (IdentityError error in result.Errors)
@@ -63,7 +65,6 @@ namespace MonitoriaAspCore.Areas.Administracao.Controllers
             }
             return View(user);
         }
-
 
         [HttpGet]
         public async Task<IActionResult> Edit(string id)
@@ -84,6 +85,7 @@ namespace MonitoriaAspCore.Areas.Administracao.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(ApplicationUser user)
         {
+            var Message = new AppMessage();
             if (ModelState.IsValid)
             {
                 var UpdateUser = await userManager.FindByIdAsync(user.Id);
@@ -97,18 +99,26 @@ namespace MonitoriaAspCore.Areas.Administracao.Controllers
 
                 IdentityResult result = await userManager.UpdateAsync(UpdateUser);
                 if (result.Succeeded)
+                {
+
+                    Message = new AppMessage("Usuário atualizado com sucesso!", "success");
+                    TempData["StatusMessage"] = Message.Message;
                     return RedirectToAction("Index");
+                }
                 else
                 {
                     foreach (IdentityError error in result.Errors)
+                    { 
+
                         ModelState.AddModelError("", error.Description);
+                    }
                 }
             }
+
+            Message = new AppMessage("Oops, não foi possivel atualizar o usuario. Tente novamente mais tarde.", "danger");
+            TempData["StatusMessage"] = Message.Message;
             return View(user);
         }
-
-
-
 
         [HttpGet]
         public async Task<IActionResult> Delete(string id)
@@ -123,17 +133,21 @@ namespace MonitoriaAspCore.Areas.Administracao.Controllers
             {
                 return NotFound();
             }
+                       
             return View(user);
         }
         [HttpPost]
         public async Task<IActionResult> Delete(ApplicationUser  user)
         {
+            var Message = new AppMessage();
             var UserDelete = await userManager.FindByIdAsync(user.Id);
             if (UserDelete != null)
             {
                 IdentityResult result = await userManager.DeleteAsync(UserDelete);
                 if (result.Succeeded)
                 {
+                    Message = new AppMessage("Usuário excluído com sucesso!", "success");
+                    TempData["StatusMessage"] = Message.Message;
                     return RedirectToAction("Index");
                 }
                 else
@@ -143,7 +157,8 @@ namespace MonitoriaAspCore.Areas.Administracao.Controllers
                 }
             }
             else
-                ModelState.AddModelError("", "User Not Found");
+                Message = new AppMessage("Usuário excluído com sucesso!", "success");
+                TempData["StatusMessage"] = Message.Message;
             return View("Index", userManager.Users);
         }
 

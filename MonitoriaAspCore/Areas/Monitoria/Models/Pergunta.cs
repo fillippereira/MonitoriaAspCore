@@ -7,5 +7,7 @@ namespace MonitoriaAspCore.Areas.Monitoria.Models
 {
     public class Pergunta
     {
+        public int Id { get; set; }
+        public string Descricao { get; set; }
     }
 }

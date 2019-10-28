@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css?version=12" />
         <link rel="stylesheet" href="~/lib/bootstrap-multiselect/css/bootstrap-multiselect.css" />
+        <link rel="stylesheet" href="~/lib/datatable/css/datatable-bootstrap.css" />
     </environment>
 
     <environment exclude="Development">
@@ -22,19 +23,20 @@
         <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="~/css/site.css?version=12" />
         <link rel="stylesheet" href="~/lib/bootstrap-multiselect/css/bootstrap-multiselect.css" />
+        <link rel="stylesheet" href="~/lib/datatable/css/datatable-bootstrap.min.css" />
     </environment>
 
     
 </head>
-<body>
+<body class="bg-white">
     @{
         var navClass = "bg-dark navbar-dark";
     }
     @if (User.Identity.IsAuthenticated)
     {
 
-        var urlImage = "~/images/user/" + @User.FindFirst("ImagemPerfil").Value;
-        var Nome = @User.FindFirst("Nome");
+        var urlImage = "~/images/user/" + @User.Claims.FirstOrDefault(c => c.Type == "urlImage").Value;
+        /* var Nome = @User.FindFirst("Nome");
 
         if (User.FindFirst("Tema").Value == "Escuro")
         {
@@ -52,7 +54,8 @@
         else
         {
             navClass = " bg-dark navbar-dark ";
-        }
+        }*/
+
     }
 
     <div class="container-fluid h-100">
@@ -95,7 +98,7 @@
                                 <a class="nav-link" href="/"><i class="fa fa-dashboard"></i> Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Usuario/"><i class="fa fa-users"></i> Gerenciar Usuários</a>
+                                <a class="nav-link" href="/Administracao/Users/"><i class="fa fa-users"></i> Gerenciar Usuários</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Usuario/"><i class="fa fa-headphones"></i> Calibrador Expert</a>
@@ -114,11 +117,11 @@
                     </div>
                 </nav>
             </div>
-            <div class="col-md-9 col-lg-10 bg-light">
+            <div class="col-md-9 col-lg-10">
                 <div class="row">
                     <div class="col-md-12 p-0">
-                         @Html.Raw(TempData["StatusMessage"])
-                        
+                        @Html.Raw(TempData["StatusMessage"])
+
                     </div>
                 </div>
                 @RenderBody()
@@ -134,18 +137,20 @@
         <script src="~/lib/popper.js/umd/popper.js" asp-append-version="true"></script>
         <script src="~/lib/twitter-bootstrap/js/bootstrap.js" asp-append-version="true"></script>
         <script src="~/lib/font-awesome/js/all.js" asp-append-version="true"></script>
-
         <script src="~/lib/bootstrap-multiselect/js/bootstrap-multiselect.js" asp-append-version="true"></script>
+        <script src="~/lib/datatable/js/datatable.js" asp-append-version="true"></script>
         <script src="~/js/site.js?version=2" asp-append-version="true"></script>
+
     </environment>
 
     <environment exclude="Development">
-        <script src="~/lib/js/jquery-3.3.1.min.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
         <script src="~/lib/popper.js/umd/popper.min.js" asp-append-version="true"></script>
         <script src="~/lib/twitter-bootstrap/js/bootstrap.js" asp-append-version="true"></script>
-
-        <script src="~/lib/bootstrap-multiselect/js/bootstrap-multiselect.min.js" asp-append-version="true"></script>
         <script src="~/lib/font-awesome/js/all.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap-multiselect/js/bootstrap-multiselect.min.js" asp-append-version="true"></script>
+        <script src="~/lib/datatable/js/datatable.min.js" asp-append-version="true"></script>
+        <script src="~/js/site.min.js?version=12" asp-append-version="true"></script>
     </environment>
     @RenderSection("Scripts", required: false)
 </body>

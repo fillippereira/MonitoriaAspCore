@@ -10,38 +10,61 @@ using MonitoriaAspCore.Areas.Administracao.Models;
 
 namespace MonitoriaAspCore.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string, IdentityUserClaim<string>,
-    ApplicationUserRole, IdentityUserLogin<string>,
-    IdentityRoleClaim<string>, IdentityUserToken<string>>
+    public class ApplicationDbContext
+    : IdentityDbContext<
+        ApplicationUser, ApplicationRole, string,
+        IdentityUserClaim<string>, ApplicationUserRole, IdentityUserLogin<string>,
+        IdentityRoleClaim<string>, IdentityUserToken<string>>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-
         }
 
-
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
+            base.OnModelCreating(modelBuilder);
 
-            builder.Entity<ApplicationUserRole>(userRole =>
+            modelBuilder.Entity<ApplicationUser>(b =>
             {
-                userRole.HasKey(ur => new { ur.UserId, ur.RoleId });
-
-                userRole.HasOne(ur => ur.Role)
-                    .WithMany(r => r.UserRoles)
-                    .HasForeignKey(ur => ur.RoleId)
+                // Each User can have many UserClaims
+                b.HasMany(e => e.Claims)
+                    .WithOne()
+                    .HasForeignKey(uc => uc.UserId)
                     .IsRequired();
 
-                userRole.HasOne(ur => ur.User)
-                    .WithMany(r => r.UserRoles)
+                // Each User can have many UserLogins
+                b.HasMany(e => e.Logins)
+                    .WithOne()
+                    .HasForeignKey(ul => ul.UserId)
+                    .IsRequired();
+
+                // Each User can have many UserTokens
+                b.HasMany(e => e.Tokens)
+                    .WithOne()
+                    .HasForeignKey(ut => ut.UserId)
+                    .IsRequired();
+
+                // Each User can have many entries in the UserRole join table
+                b.HasMany(e => e.UserRoles)
+                    .WithOne(e => e.User)
                     .HasForeignKey(ur => ur.UserId)
                     .IsRequired();
             });
-        }
 
-        public DbSet<MonitoriaAspCore.Areas.Monitoria.Models.Bloco> Bloco { get; set; }
+            modelBuilder.Entity<ApplicationRole>(b =>
+            {
+                // Each Role can have many entries in the UserRole join table
+                b.HasMany(e => e.UserRoles)
+                    .WithOne(e => e.Role)
+                    .HasForeignKey(ur => ur.RoleId)
+                    .IsRequired();
+            });
+
+        }
+    
+
+    public DbSet<MonitoriaAspCore.Areas.Monitoria.Models.Bloco> Bloco { get; set; }
 
         public DbSet<MonitoriaAspCore.Areas.Administracao.Models.User> User { get; set; }
    

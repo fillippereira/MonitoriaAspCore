@@ -16,5 +16,9 @@ namespace MonitoriaAspCore.Models
             Message = "<div class=\"alert alert-"+Class+" alert-dismissible text-center shadow-sm\"><button type = \"button\" class=\"close\" data-dismiss=\"alert\">&times;</button><strong></strong>"+Content+"</div>";
             
         }
-}
+
+        public AppMessage()
+        {
+        }
+    }
 }

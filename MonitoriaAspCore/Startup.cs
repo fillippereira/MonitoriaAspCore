@@ -45,10 +45,11 @@ namespace MonitoriaAspCore
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<ApplicationUser>()
-                .AddRoles<ApplicationRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddClaimsPrincipalFactory<MyUserClaimsPrincipalFactory>();
+            services.AddIdentity<ApplicationUser, ApplicationRole>()
+             .AddEntityFrameworkStores<ApplicationDbContext>()
+             .AddDefaultUI()
+             .AddDefaultTokenProviders();
+             //.AddClaimsPrincipalFactory<MyUserClaimsPrincipalFactory>();
 
             services.AddScoped<SignInManager<ApplicationUser>, SignInManager<ApplicationUser>>();
 

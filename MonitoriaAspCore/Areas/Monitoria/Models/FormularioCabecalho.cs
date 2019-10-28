@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MonitoriaAspCore.Areas.Monitoria.Models
 {
-    public class Cabecalho_formulario
+    public class FormularioCabecalho
     {
     }
 }

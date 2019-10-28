@@ -6,7 +6,7 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    var urlImage = "~/images/user/" + @User.FindFirst("ImagemPerfil").Value;
+    var urlImage = "~/images/user/" + @User.Claims.FirstOrDefault(c => c.Type == "urlImage").Value;
     <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-bell"></i><span class="badge badge-pill badge-danger" style="position:relative;left:-4px;top:-10px">1</span></a></li>
@@ -15,7 +15,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                     <img class=" rounded-circle m-0" width="30" height="30" style="background-size:100%" src="@Url.Content(urlImage)" alt="User picture">
-                    @User.FindFirst("Nome").Value
+                    @*@User.FindFirst("Nome").Value*@
 
                 </a>
                 <div class="dropdown-menu float-left">
